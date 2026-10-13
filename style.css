@@ -1,0 +1,117 @@
+* { 
+    box-sizing: border-box; 
+    margin: 0;
+    padding: 0;
+}
+
+body { 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    min-height: 100vh; 
+    padding: 20px; 
+    background: #14161a; 
+    font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; 
+}
+
+.calculator { 
+    display: flex; 
+    flex-direction: column; 
+    width: 320px; 
+    padding: 24px 20px; 
+    border: 1px solid #2a2c30; 
+    border-radius: 24px; 
+    background: #000000; 
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4); 
+    
+}
+
+.calculator-screen { 
+    width: 100%; 
+    height: 70px;          
+    margin-bottom: 20px; 
+    padding: 0 14px; 
+    border: 0; 
+    background: #2c2c2e;
+    color: #ffffff; 
+    font-size: 38px; 
+    font-weight: 400;
+    text-align: right; 
+    outline: none;
+    border-radius: 12px;
+    letter-spacing: -0.5px;
+}
+
+.keys { 
+    display: grid; 
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 12px; 
+}
+
+.key { 
+    display: grid; 
+    place-items: center; 
+    width: 100%; 
+    aspect-ratio: 1; 
+    border: 0; 
+    border-radius: 50%; 
+    background: #2c2c2e; 
+    color: #ffffff; 
+    font-size: 22px; 
+    font-weight: 500;
+    cursor: pointer; 
+    -webkit-tap-highlight-color: transparent; 
+    transition: background-color 0.15s ease, transform 0.05s ease;
+}
+
+.key.utility { 
+    background: #2c2c2e; 
+    color: #ffffff; 
+}
+.key.utility.white{
+    background: white;
+    color: black ;
+}
+
+.key.operator, .key.equals { 
+    background: #ff9f0a; 
+    color: #161414; 
+}
+
+.key.zero { 
+    grid-column: span 2; 
+    aspect-ratio: auto; 
+    height: 100%;          
+    justify-content: center;
+    display: flex; 
+    padding-left: 24px; 
+    border-radius: 40px;
+    align-items: center;
+     
+}
+   
+.key:hover { 
+    filter: brightness(1.15); 
+}
+
+.key:active {
+    transform: scale(0.96);
+}
+
+/*.@media (max-width: 340px) {
+    .calculator { 
+        width: 100%;
+        padding: 16px 12px; 
+        border-radius: 20px; 
+    }
+    .keys { 
+        gap: 8px; 
+    }
+    .key { 
+        font-size: 18px; 
+    }
+    .calculator-screen {
+        font-size: 32px;
+        height: 60px;
+    }
+} */
